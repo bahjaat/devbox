@@ -18,14 +18,14 @@ Vagrant::configure("2") do |config|
   config.vm.synced_folder "www", "/var/www", type: "nfs"
 
   # Set the Timezone to something useful
-  config.vm.provision :shell, :inline => "echo \"Europe/Berlin\" | sudo tee /etc/timezone && dpkg-reconfigure --frontend noninteractive tzdata"
+  config.vm.provision :shell, :inline => "echo \"Europe/Amsterdam\" | sudo tee /etc/timezone && dpkg-reconfigure --frontend noninteractive tzdata"
 
   # Assign this VM to a host-only network IP, allowing you to access it
   # via the IP. Host-only networks can talk to the host machine as well as
   # any other machines on the same network, but cannot be accessed (through this
   # network interface) by any external networks.
 
-  config.vm.network :private_network, ip: "192.168.3.3"
+  config.vm.network :private_network, ip: "192.168.10.10"
 
   config.vm.provision :puppet do |puppet|
      puppet.facter = { "fqdn" => "local.devbox", "hostname" => "devbox" }
