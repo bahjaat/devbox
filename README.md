@@ -13,6 +13,7 @@ devbox is a Vagrant development machine provisioned and preconfigured for workin
   * Comment out the line `#bind-address = 127.0.0.1`
   * Restart MySQL service: `sudo service mysql restart`
 2. XDEBUG for remote debugging
+  * Edit xdebug config: `sudo vi /etc/php5/mods-available/xdebug.ini`. Add the following:
 ```
 xdebug.remote_enable = 1
 xdebug.remote_host = "192.168.10.10"
@@ -21,10 +22,16 @@ xdebug.remote_handler = "dbgp"
 xdebug.remote_mode = req
 xdebug.remote_connect_back = 1
 ```
-  * asdfasdf
-3. asdf
-  * qwer
-  * asdfasd
+  * Restart PHP: `sudo service php5-fpm restart`
+  * Add the following to your sublime-project file:
+```
+"settings": {
+    "xdebug": {
+         "url": "http://yourwebsite.dev/",
+         "path_mapping": {"/var/www/yourwebsite.dev" : "D:\\Vagrant\\devbox\\www\\yourwebsite.dev"}
+    }
+}
+```
 
 
 ## Features / Stack
