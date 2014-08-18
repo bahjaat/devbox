@@ -13,7 +13,7 @@ devbox is a Vagrant development machine provisioned and preconfigured for workin
   * Comment out the line `#bind-address = 127.0.0.1`
   * Restart MySQL service: `sudo service mysql restart`
 2. XDEBUG for remote debugging
-  * ```
+```
 xdebug.remote_enable = 1
 xdebug.remote_host = "192.168.10.10"
 xdebug.remote_port = 9000
