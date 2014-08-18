@@ -7,19 +7,24 @@ devbox is a Vagrant development machine provisioned and preconfigured for workin
 ## Changes made by Bahjaat
 
 1. MySQL
-* Login: `mysql -uroot -proot`
-* Grant privileges: `GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'password';`
-* Edit configfile for remote access: `sudo vi /etc/mysql/my.cnf`
-* Comment out the line `#bind-address = 127.0.0.1`
-* Restart MySQL service: `sudo service mysql restart`
+  * Login: `mysql -uroot -proot`
+  * Grant privileges: `GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'password';`
+  * Edit configfile for remote access: `sudo vi /etc/mysql/my.cnf`
+  * Comment out the line `#bind-address = 127.0.0.1`
+  * Restart MySQL service: `sudo service mysql restart`
 2. XDEBUG for remote debugging
-* ```xdebug.remote_enable = 1
-xdebug.remote_host = "127.0.0.1"
+  * ```
+xdebug.remote_enable = 1
+xdebug.remote_host = "192.168.10.10"
 xdebug.remote_port = 9000
 xdebug.remote_handler = "dbgp"
 xdebug.remote_mode = req
-xdebug.remote_connect_back = 1```
-* asdfasdf
+xdebug.remote_connect_back = 1
+```
+  * asdfasdf
+3. asdf
+  * qwer
+  * asdfasd
 
 
 ## Features / Stack
