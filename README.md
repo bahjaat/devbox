@@ -8,7 +8,7 @@ devbox is a Vagrant development machine provisioned and preconfigured for workin
 
 1. MySQL
   * Login: `mysql -uroot -proot`
-  * Grant privileges: `GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'password';`
+  * Grant privileges: `GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'root';`
   * Edit configfile for remote access: `sudo vi /etc/mysql/my.cnf`
   * Comment out the line `#bind-address = 127.0.0.1`
   * Restart MySQL service: `sudo service mysql restart`
