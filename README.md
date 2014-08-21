@@ -34,6 +34,7 @@ xdebug.remote_connect_back = 1
 ```
 3. Ctag install
   * `sudo apt-get install exuberant-ctags`
+  * From webroot: `ctags -R -f .tags`
 
 ## Features / Stack
 Ubuntu 14.04 64bit, Nginx, PHP5.5, php-fpm, xdebug, composer, MySQL 5.5, Redis, Beanstalkd, supervisord, Sphinx, ngrok, Node.js, MongoDB
