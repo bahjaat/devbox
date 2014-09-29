@@ -15,7 +15,7 @@ Vagrant::configure("2") do |config|
   config.vm.box = "ubuntu/trusty64"
   config.vm.hostname = "devbox"
   config.vm.network :forwarded_port, host: 8080, guest: 80
-  config.vm.synced_folder "www", "/var/www", type: "nfs"
+  config.vm.synced_folder "../Code", "/var/www", type: "nfs"
 
   # Set the Timezone to something useful
   config.vm.provision :shell, :inline => "echo \"Europe/Amsterdam\" | sudo tee /etc/timezone && dpkg-reconfigure --frontend noninteractive tzdata"
